@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Paradiso delle Madonie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'HotelMadonie/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/def77bce62.js" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <style>
+      body {
+        background: linear-gradient(rgba(0, 0, 0, 0.449), rgba(0, 0, 0, 0.436)), url('{{ sfondo2.url }}') no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+
+
+
+
+<nav class="navbar rounded-bottom" style="background-color: #fffffff4; max-width: 1200px; margin: 0 auto;">
+    <div class="container-fluid d-flex justify-content-center">
+      <a class="navbar-brand mr-auto" href="{% url 'Home' %}">
+        <img src="{{ logo.url }}" alt="Logo Hotel Madonie" width="250" height="125" class="d-inline-block align-text-top">
+      </a>
+      <div class="ml-auto">
+        <a type="a" class="btn-custom mx-2" style="padding: 10px"  href="{% url 'Home' %}">Home</a>
+        <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Castelbuono' %}">Castelbuono</a>
+        <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Camere' %}">Hotel</a>
+        <a type="a" class="btn-custom btn-pagina-corrente mx-2" style="padding: 10px" href="{% url 'Contattaci' %}">Info</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5 text-center" style="max-width: 700px; background-color: rgb(255, 255, 255); border-radius: 10px;">
+    <div class="col-md-12">
+        <div class="contact-info">
+            <h4 style="padding-top: 20px">Info & Contatti</h4>
+            <p>Per effettuare la tua prenotazione, non esitare a contattarci. Saremo felici di assisterti e fornirti tutte le informazioni di cui hai bisogno. Puoi contattarci tramite i seguenti metodi:</p>
+            <ul style="list-style-type: none; padding-left: 0;">
+              <li><strong>Telefono:</strong> 0921 820683</li>
+              <li><strong>Cellulare:</strong> 392 930 9201</li>
+              <li><strong>E-mail:</strong> info@paradisodellemadonie.it</li>
+            </ul>
+            <p>Il nostro team è disponibile per rispondere a tutte le tue domande e aiutarti a organizzare il tuo soggiorno nel migliore dei modi. Non vediamo l'ora di sentirti!</p>
+            
+        </div>
+    </div>
+
+    <!-- Here we add the map -->
+    <div class="container d-flex justify-content-center" style="padding-bottom: 20px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2987.725357922899!2d14.04364631546913!3d37.934092779728605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1314af4a9655a909%3A0x98bf7682586af40d!2sVia%20Dante%20Alighieri%2C%2082%2C%2090043%20Castelbuono%20PA%2C%20Italy!5e0!3m2!1sen!2sus!4v1622181231657!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+
+
+<div class="text-center p-3" style="color: rgb(36, 31, 84); background-color: #ffffff;">
+  © 2023 | Hotel Paradiso delle Madonie  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
+
+
+
+

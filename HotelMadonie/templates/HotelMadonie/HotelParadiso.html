@@ -1,0 +1,63 @@
+
+{% extends 'HotelMadonie/common.html' %}
+
+{% block content %}
+
+<nav class="navbar rounded-bottom" style="background-color: #fffffff4; max-width: 1200px; margin: 0 auto;">
+  <div class="container-fluid d-flex justify-content-center">
+    <a class="navbar-brand mr-auto" href="{% url 'Home' %}">
+      <img src="{{ logo.url }}" alt="Logo Hotel Madonie" width="250" height="125" class="d-inline-block align-text-top">
+    </a>
+    <div class="ml-auto">
+      <a type="a" class="btn-custom btn-pagina-corrente mx-2" style="padding: 10px"  href="{% url 'Home' %}">Home</a>
+      <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Castelbuono' %}">Castelbuono</a>
+      <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Camere' %}">Hotel</a>
+      <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Contattaci' %}">Info</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-2 d-flex align-items-center justify-content-center" style="background-color: #ffffff00; max-width: 1920px; height: 700px; margin-top: 200px;">
+    <div class="col-md-6">
+  <h1 class="display-2" style="color: white;font-family: Roboto;"><strong>Hotel<br>Paradiso delle Madonie<br></strong></h1>
+    <p class="display-7" style="color: white;font-family: Roboto;">L'hotel ideale per scoprire le bellezze della Sicilia.</p>
+</div>
+</div>
+
+<div class="conteiner my-0" style="border-radius: 5px;background-color: rgba(255, 255, 255, 0.965)">
+
+<div class="container my-0 d-flex justify-content-center overflow-hidden p-0" style="box-sizing: border-box; border-radius: 5px;">
+  <div class="row">
+    <div class="col-md-6 my-4 col-sm-12 order-md-1 order-sm-2" style="position: relative;">
+      <img src="{{ reception.url }}" class="img-fluid mb-3 position-relative shadow m-3" style="max-height: 475px;border-radius: 5px;">
+    </div>
+    <div class="col-md-6 my-4 col-sm-12 order-md-2 order-sm-1" style="background-color: rgba(255, 255, 255, 0);border-radius: 5px;">
+      <div class="text-center p-3 shadow">
+        <h2 class="display-6" style="font-family: Roboto;"><strong>Il nostro hotel</strong></h2>
+        <p1 style="color: rgb(36, 31, 84);font-family: Roboto;font-size: 20px"><br>Venite a Castelbuono, il borgo delle Madonie dove storia, natura e tradizione si uniscono. Il nostro hotel vi offre comfort e qualità nel cuore del paese, vicino al castello dei Ventimiglia e alla chiesa di Sant’Anna. Le nostre camere sono arredate con cura e dotate di ogni comfort. La mattina vi delizieremo con una colazione a base di prodotti tipici locali, tra cui la famosa manna di Castelbuono. Potrete poi visitare le bellezze del paese e del Parco delle Madonie , dove troverete sentieri , percorsi , aree , parchi , riserve e panorami. Castelbuono è anche il luogo delle tradizioni e delle feste popolari della Sicilia: dal carnevale alla festa patronale di Sant’Anna, dal giro podistico al festival Ypsigrock.<br> Vi aspettiamo!<br></p1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-0 d-flex justify-content-center overflow-hidden p-0" style="box-sizing: border-box; border-radius: 5px;">
+  <div class="row">
+    <div class="col-md-6 my-0 col-sm-12 order-md-1 order-sm-2" style="border-radius: 5px;">
+      <div class="text-center p-3 shadow">
+        <h2 class="display-6" style="color: rgb(36, 31, 84);font-family: Roboto"><strong>Goditi un fantastico soggiorno<br>insieme a noi</strong></h2>
+        <p1 style="color: rgb(36, 31, 84); font-size: 20px; font-family: Roboto"><br>Inizia la tua giornata con una deliziosa colazione a buffet presso l'Hotel Paradiso delle Madonie. Servita dalle 07:30 alle 10:00, la nostra colazione include una vasta selezione di prodotti dolci e salati per soddisfare tutti i gusti. Inoltre, siamo orgogliosi di offrire anche un ristorante convenzionato all'esterno dell'hotel, dove potrai gustare menù creati con le specialità e i sapori tipici della regione madonita. Vieni a scoprire un'esperienza culinaria indimenticabile.<br></p1>
+      </div>
+    </div>
+    <div class="col-md-6 my-0 col-sm-12 order-md-2 order-sm-1" style="margin-left: -35px;">
+      <img src="{{ colazione.url }}" class="img-fluid mb-3 shadow m-3" style="max-height: 475px;border-radius: 5px; z-index: -1;">
+    </div>
+  </div>
+
+
+</div>
+ <div class="container-fluid d-flex mt-5 justify-content-center">
+ <a type="button" class="btn btn-primary my-3" href="{% url 'Contattaci' %}">Contattaci ora!</a>
+</div>
+</div>
+
+{% endblock %}

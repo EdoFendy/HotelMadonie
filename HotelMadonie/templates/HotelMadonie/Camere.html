@@ -1,0 +1,147 @@
+{% extends 'HotelMadonie/common.html' %}
+{% load static %}
+{% block content %}
+<nav class="navbar rounded-bottom" style="background-color: #fffffff4; max-width: 1200px; margin: 0 auto;">
+  <div class="container-fluid d-flex justify-content-center">
+    <a class="navbar-brand mr-auto" href="{% url 'Home' %}">
+      <img src="{{ logo.url }}" alt="Logo Hotel Madonie" width="250" height="125" class="d-inline-block align-text-top">
+    </a>
+    <div class="ml-auto">
+      <a type="a" class="btn-custom mx-2" style="padding: 10px"  href="{% url 'Home' %}">Home</a>
+      <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Castelbuono' %}">Castelbuono</a>
+      <a type="a" class="btn-custom  btn-pagina-corrente mx-2" style="padding: 10px" href="{% url 'Camere' %}">Hotel</a>
+      <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Contattaci' %}">Info</a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/camere.css' %}">
+<script src="{% static 'js/camere.js' %}"></script>
+
+<div class="container my-5 text-center" style="max-width: 1080; background-color: rgba(255, 255, 255, 0);">
+  <h1 class="display-5" style="color: white;"><strong>Hotel Paradiso delle Madonie</strong></h1>
+  <p1 style="color: white;">La tua miglior scelta!</p1>
+</div>
+
+
+<div class="container my-2 mt-5 justify-content-center" style="max-width: 1080px; padding: 40px; background-color: rgba(255, 255, 255, 0.921); box-sizing: border-box;border-radius: 20px;">
+  <h1 class="display-5 text-center" style="color: rgb(36, 31, 84);"><strong>Il nostro Hotel</strong></h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+     
+        
+        <p1 class="mt-6" style="color: rgb(36, 31, 84);">Parte del Parco Regionale delle Madonie, l'Hotel Paradiso Delle Madonie si trova nel cuore di Castelbuono e offre camere arredate in stile classico con minibar e WiFi gratuito. <br><br>Situato in prossimità della campagna che circonda Castelbuono, il Paradiso Delle Madonie vanta sistemazioni climatizzate e dotate di mobili in legno massiccio e bagno completamente attrezzato con doccia.<br><br> A pochi passi dalla struttura vi attendono i migliori ristoranti di Castelbuono. La colazione viene servita ogni giorno e il bar in loco propone bevande calde e fredde.<br><br> L'Hotel Paradiso Delle Madonie è ubicato in prossimità di numerose attrazioni culturali e antichi monumenti, tra cui il Museo Naturalistico Minà Palumbo e la città arabo-normanna di Cefalù con una splendida cattedrale, e a 10 minuti a piedi dal Castello dei Ventimiglia, accessibile gratuitamente.</p1>
+
+      </div>
+      <div class="col-md-6">
+    
+
+        <form class="container my-2 mt-5 justify-content-center mb-3 ms-md-3">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            
+            
+            <div class="carousel-inner justify-content-center" style="max-width: 1080px;">
+              <div class="carousel-item active">
+                <img src="{{ reception2.url }}" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="fronte-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ reception.url }}" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="reception-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ scala.url }}" class="d-block w-100 mx-auto" style="height: 500px; object-fit: cover;" alt="bagno-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ fronte.url }}" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="reception-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ reception2.url }}" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="reception2-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ hotel1.url }}" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="reception2-image">
+              </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </form>
+      </div>
+    </div>
+    <h1 class="display-5 text-center" style="color: rgb(36, 31, 84);"><strong>Le nostre camere</strong></h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mt-5">          
+          <p1 class="mt-6" style="color: rgb(36, 31, 84);">L'Hotel Paradiso delle Madonie offre camere eleganti e confortevoli, dotate di arredi in stile classico e rustico. Le camere sono disponibili in diverse categorie, tra cui singole, doppie, triple e quadruple, tutte con bagno privato, TV satellitare, aria condizionata e connessione Wi-Fi gratuita.
+            Alcune camere offrono anche una vista panoramica sulle montagne circostanti o sul centro storico di Castelbuono. Gli ospiti possono inoltre usufruire di servizi extra come il servizio in camera, la colazione continentale a buffet e il parcheggio privato gratuito.
+            In generale, le camere dell'Hotel Paradiso delle Madonie sono ben arredate e offrono una piacevole esperienza di soggiorno durante la visita a Castelbuono e alle Madonie.</p1>
+  
+        </div>
+        <div class="col-md-6">  
+          <div id="carouselExampleIndicators2" class="carousel slide" style="max-width: 1080px; max-height: 1080px;">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner justify-content-center">
+              <div class="carousel-item active">
+                <img src="{{ camerabella.url }}" class="d-block w-100 carousel-img" style="height: 500px; object-fit: cover;" alt="fronte-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ camerabella2.url }}" class="d-block w-100 mx-auto carousel-img" style="height: 500px; object-fit: cover;" alt="reception-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ camerabella3.url }}" class="d-block w-100 mx-auto carousel-img" style="height: 500px; object-fit: cover;" alt="bagno-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ bagno.url }}" class="d-block w-100 carousel-img" style="height: 500px; object-fit: cover;" alt="reception-image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ porta.url }}" class="d-block w-100 carousel-img" style="height: 500px; object-fit: cover;" alt="reception-image">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        
+        </div>
+        
+        
+     </div>
+     <div class="container-fluid d-flex mt-5 justify-content-center">
+      <a type="button" class="btn btn-primary my-3" href="{% url 'Contattaci' %}">Contattaci ora!</a>
+     </div>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

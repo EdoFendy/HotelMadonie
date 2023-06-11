@@ -1,0 +1,58 @@
+{% extends 'HotelMadonie/common.html' %}
+{% block content %}
+<nav class="navbar rounded-bottom" style="background-color: #fffffff4; max-width: 1200px; margin: 0 auto;">
+    <div class="container-fluid d-flex justify-content-center">
+      <a class="navbar-brand mr-auto" href="{% url 'Home' %}">
+        <img src="{{ logo.url }}" alt="Logo Hotel Madonie" width="250" height="125" class="d-inline-block align-text-top">
+      </a>
+      <div class="ml-auto">
+        <a type="a" class="btn-custom mx-2" style="padding: 10px"  href="{% url 'Home' %}">Home</a>
+        <a type="a" class="btn-custom btn-pagina-corrente mx-2" style="padding: 10px" href="{% url 'Castelbuono' %}">Castelbuono</a>
+        <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Camere' %}">Hotel</a>
+        <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Contattaci' %}">Info</a>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="container my-5 text-center" style="max-width: 700px; background-color: rgba(255, 255, 255, 0);">
+        <h1 class="display-5" style="color: white;"><strong>Castelbuono, un borgo autentico della Sicilia</strong></h1>
+        <p1 style="color: white;">Castelbuono è un pittoresco comune situato nella provincia di Palermo, in Sicilia, che offre molte opportunità per i turisti che visitano la zona. Questa località offre un'esperienza autentica della cultura siciliana, dalla gastronomia alla storia e all'architettura.
+      </p1>
+     </div>
+
+
+
+     <div class="container my-2 mt-5 justify-content-center" style="max-width: 1080px; padding: 40px; background-color: rgba(255, 255, 255, 0.921); box-sizing: border-box;border-radius: 20px;">
+      <h1 class="display-5 mt-4 text-center" style="color: rgb(36, 31, 84);"><strong>Tra storia e cultura</strong></h1>
+      <div class="clearfix">
+      <img src="{{ castello.url }}" class="img-fluid mb-2 mt-4 shadow mx-auto d-block" style="max-width: 80%; border-radius: 20px">
+      <p style="color: rgb(36, 31, 84);padding: 40px"> <br>Castelbuono è un borgo incantevole della provincia di Palermo, situato nel Parco delle Madonie, una zona ricca di biodiversità e di paesaggi mozzafiato. Castelbuono ha origini antiche e conserva ancora oggi il fascino della sua storia e delle sue tradizioni. Il simbolo di Castelbuono è il castello dei Ventimiglia, una fortezza medievale che ospita al suo interno il museo civico, dove si possono ammirare opere d’arte di grande valore, tra cui la cappella palatina con le reliquie del teschio di Sant’Anna. Il centro storico di Castelbuono è un labirinto di viuzze e piazzette, dove si respira un’atmosfera autentica e accogliente. Le chiese barocche sono testimonianze della fede e dell’arte del popolo castelbuonese, che si esprime anche nelle botteghe artigianali e nei locali tipici.</p1>
+      </div>
+
+
+      <h1 class="display-5 mt-4 text-center" style="color: rgb(36, 31, 84);"><strong>La cucina madonita e la manna di Castelbuono</strong></h1>
+      <div class="clearfix">
+      <img src="{{ manna.url }}" class="img-fluid mb-2 mt-4 shadow mx-auto d-block" style="max-width: 80%; border-radius: 20px">
+      <p style="color: rgb(36, 31, 84);padding: 40px"> <br>A Castelbuono si può gustare la cucina madonita, basata su prodotti genuini e stagionali, come i funghi porcini, i formaggi, i salumi, le carni e i dolci. Tra questi spicca la manna di Castelbuono , un nettare dolce ottenuto dalla corteccia del frassino , che ha proprietà benefiche per la salute e che è prodotto solo in questa zona.</p1>
+      </div>
+
+
+
+      <h1 class="display-5 mt-4 text-center" style="color: rgb(36, 31, 84);"><strong>Parco delle madonie</strong></h1>
+      <div class="clearfix">
+      <img src="{{ parcomadonie.url }}" class="img-fluid mb-2 mt-4 shadow mx-auto d-block" style="max-width: 80%; border-radius: 20px">
+      <p style="color: rgb(36, 31, 84);padding: 40px"> <br>Castelbuono è anche il punto di partenza ideale per escursioni nella natura circostante. Il Parco delle Madonie, una riserva naturale che si estende per oltre 40.000 ettari, offre sentieri escursionistici di diversa difficoltà e permette di ammirare la flora e la fauna locali. Tra le attività disponibili nel parco vi sono trekking, escursioni a cavallo, mountain bike e arrampicata. Il parco rappresenta un'oasi di pace e di natura, ideale per chi desidera immergersi nella bellezza della natura siciliana. </p1>
+      </div>
+
+
+
+      <h1 class="display-5 mt-4 text-center" style="color: rgb(36, 31, 84);"><strong>Museo del Gusto e dolci tipici</strong></h1>
+      <div class="clearfix">
+      <img src="{{ fiasconaro.url }}" class="img-fluid mb-2 mt-4 shadow mx-auto d-block" style="max-width: 80%; border-radius: 20px">
+      <p style="color: rgb(36, 31, 84);padding: 40px"> <br>Castelbuono è famosa per la sua produzione di dolci tradizionali come il cannolo, la cassata e la pasta di mandorle, ma anche per i suoi pregiati vini. Gli amanti della gastronomia non possono perdere l'occasione di visitare il Museo del Gusto, situato nel centro storico di Castelbuono, dove si può scoprire la tradizione culinaria della Sicilia e degustare i sapori autentici della zona. Inoltre, consigliamo di fare una visita alla pasticceria Fiasconaro, simbolo della tradizione dolciaria siciliana, che offre degustazioni di dolci tipici artigianali come il panettone, la colomba pasquale e la torroneria.</p1>    
+      </div>
+
+
+</div>
+{% endblock %}

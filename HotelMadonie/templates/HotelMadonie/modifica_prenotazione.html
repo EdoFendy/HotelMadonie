@@ -1,0 +1,36 @@
+{% extends 'HotelMadonie/common.html' %}
+{% block content %}
+<nav class="navbar rounded-bottom" style="background-color: #fffffff4; max-width: 1200px; margin: 0 auto;">
+    <div class="container-fluid d-flex justify-content-center">
+      <a class="navbar-brand mr-auto" href="{% url 'Home' %}">
+        <img src="{{ logo.url }}" alt="Logo Hotel Madonie" width="250" height="125" class="d-inline-block align-text-top">
+      </a>
+      <div class="ml-auto">
+        <a type="a" class="btn-custom mx-2" style="padding: 10px"  href="{% url 'Home' %}">Home</a>
+        <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Castelbuono' %}">Castelbuono</a>
+        <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Camere' %}">Camere</a>
+        <a type="a" class="btn-custom btn-pagina-corrente mx-2" style="padding: 10px" href="{% url 'nuova_prenotazione' %}">Prenota</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <div class="container mt-5" style="background-color:  white">
+    <h2>Modifica prenotazione</h2>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Modifica" class="btn btn-primary">
+    </form>
+  </div>
+
+
+
+
+
+
+
+{% endblock %}

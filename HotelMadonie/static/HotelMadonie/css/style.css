@@ -1,0 +1,50 @@
+
+  .btn-primary {
+
+    color: #ffffffe0;
+    background-color: #221c57c7;
+    border-color: #ffffffc6;
+
+  }
+  .btn-primary:hover {
+    color: #221c57;
+    background-color: #fff;
+    
+  }
+  
+  .btn-outline-custom:hover {
+    color: #fff;
+    background-color: #221c57;
+    border-color: #221c57;
+  }
+  
+  
+  
+ body {
+  padding: 0 20px;
+}
+
+
+.btn-custom {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #221c57;
+  text-decoration: none;
+  line-height: 30px;
+  letter-spacing: 3px;
+  border-bottom: 3px solid transparent;
+}
+
+.btn-custom:hover {
+  border-top: 1px solid #221c57;
+  
+  padding-bottom: 2px;
+}
+
+.btn-pagina-corrente{
+  border-top: 1px solid #221c57;
+  
+  padding-bottom: 2px;
+
+}

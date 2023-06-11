@@ -1,0 +1,69 @@
+{% extends 'HotelMadonie/common.html' %}
+{% load static %}
+{% block content %}
+<nav class="navbar rounded-bottom" style="background-color: #fffffff4; max-width: 1200px; margin: 0 auto;">
+  <div class="container-fluid d-flex justify-content-center">
+    <a class="navbar-brand mr-auto" href="{% url 'Home' %}">
+      <img src="{{ logo.url }}" alt="Logo Hotel Madonie" width="250" height="125" class="d-inline-block align-text-top">
+    </a>
+    <div class="ml-auto">
+      <a type="a" class="btn-custom mx-2" style="padding: 10px"  href="{% url 'Home' %}">Home</a>
+      <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Castelbuono' %}">Castelbuono</a>
+      <a type="a" class="btn-custom mx-2" style="padding: 10px" href="{% url 'Camere' %}">Camere</a>
+      <a type="a" class="btn-custom btn-pagina-corrente mx-2" style="padding: 10px" href="{% url 'nuova_prenotazione' %}">Prenota</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container mt-5" style="background-color:  white">
+  <h2>Prenotazioni</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Data di arrivo</th>
+        <th>Data di partenza</th>
+        <th>Oraio arrivo</th>
+        <th>Camera</th>
+        <th>Numero Camere</th>
+        <th>E-mail</th>
+        <th>Telefono</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for prenotazione in prenotazioni %}
+      <tr>
+        <td>{{ prenotazione.nome }}</td>
+        <td>{{ prenotazione.cognome }}</td>
+        <td>{{ prenotazione.data_arrivo }}</td>
+        <td>{{ prenotazione.data_partenza }}</td>
+        <td>{{ prenotazione.ora_arrivo }}</td>
+        <td>{{ prenotazione.tipo_camera }}</td>
+        <td>{{ prenotazione.num_camere }}</td>
+        <td>{{ prenotazione.email }}</td>
+        <td>{{ prenotazione.numero }}</td>
+        <td>
+          <form action="{% url 'elimina_prenotazione' prenotazione.pk %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger">Elimina</button>
+          </form>
+      </td>
+      <td>
+        <a href="{% url 'modifica_prenotazione' prenotazione.pk %}" class="btn btn-primary btn-sm">Modifica</a>
+      </td>
+ 
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="8">Nessuna prenotazione</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'nuova_prenotazione' %}" class="btn btn-success">Nuova prenotazione</a>
+</div>
+{% endblock %}
